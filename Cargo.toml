@@ -14,23 +14,21 @@ protobuf-src = ["dep:protobuf-src"]
 openssl-src = ["openssl-sys/vendored"]
 
 [dependencies]
-base64 = "0.22.0"
+base64 = "0.22.1"
 prost = "0.13.1"
-bytes = "1.5.0" # Required by proto?
+bytes = "1.6.1"
 tokio-native-tls = "0.3.1"
 futures-util = "0.3.30"
 async-stream = "0.3.5"
 ece = "2.3.1"
-serde_json = "1.0.113"
-pin-project-lite = "0.2.13"
-thiserror = "1.0.57"
+thiserror = "1.0.63"
 log = "0.4.22"
 reqwest = { version = "0.12.5", features = ["json"] }
 uuid = { version = "1.10.0", features = ["v4"] }
 openssl-sys = { version = "0.9.103" }
 serde = { version = "1.0.204", features = ["derive"] }
-tokio = { version = "1.36.0", features = ["rt", "rt-multi-thread", "macros", "net", "io-util"] }
+tokio = { version = "1.39.1", features = ["rt", "rt-multi-thread", "macros", "net", "io-util"] }
 
 [build-dependencies]
-protobuf-src = { version = "2.0.1", optional = true }
+protobuf-src = { version = "2.1.0", optional = true }
 prost-build = "0.13.1"
