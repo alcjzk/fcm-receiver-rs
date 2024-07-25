@@ -7,9 +7,11 @@ authors = ["tuomas.jaasalo@alceon.fi"]
 publish = false
 
 [features]
-default = ["protobuf-src"]
-# Include protoc source for instead of requiring an existing installation.
+default = ["protobuf-src", "openssl-src"]
+# Include protoc source instead of requiring an existing installation.
 protobuf-src = ["dep:protobuf-src"]
+# Include openssl source instead of requiring an existing installation.
+openssl-src = ["openssl-sys/vendored"]
 
 [dependencies]
 base64 = "0.22.0"
@@ -25,7 +27,7 @@ thiserror = "1.0.57"
 log = "0.4.22"
 reqwest = { version = "0.12.5", features = ["json"] }
 uuid = { version = "1.10.0", features = ["v4"] }
-openssl-sys = { version = "0.9.103", features = ["vendored"] }
+openssl-sys = { version = "0.9.103" }
 serde = { version = "1.0.204", features = ["derive"] }
 tokio = { version = "1.36.0", features = ["rt", "rt-multi-thread", "macros", "net", "io-util"] }
 
